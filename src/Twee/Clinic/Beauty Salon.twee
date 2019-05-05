@@ -6,11 +6,11 @@
 	<<if (not $flags.salonVisited)>>\
 		<<set $flags.salonVisited to true>>\
 		<<set $flags.salonVisitedFirst to true>>\
-		You enter the Beauty salon and are greeted by an enthusiastic young woman dressed in a barely decent version of a //"sexy nurse"// uniform. Her name tag reads, "Nancy."
+		You enter the Beauty Salon and are greeted by an enthusiastic young woman dressed in a barely decent version of a //"sexy nurse"// uniform. It's the kind of outfit that would fit in better at a costume party. Her name tag reads, "Nancy."
 
 		She looks over your\
 		<<if (_o and _o.female)>>\
-			dress and flashes a knowing smile, making you realize that she is not fooled for a minute, before listing a number of options available from the salon.
+			attire and flashes a knowing smile, making you realize that she is not fooled for a minute, before listing a number of options available from the salon.
 		<<else>>\
 			outfit with barely hidden amusement before listing a number of options available from the salon.
 		<<endif>>\

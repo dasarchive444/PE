@@ -9,10 +9,10 @@
 	<<if ($time.hour <= 5) or ($time.hour >= 21)>>\
 		<<goto [[Beauty Salon]]>>\
 	<<endif>>\
-Nancy asks if you want to make any changes to your body. There are options for increasing breast size, making lips fuller, reshaping your nose, altering your overall face form and even smoothing your anus. Also there are options to make temporary treatments permanent.
+Nancy offers you a list of procedures you can undergo. The options include things like increasing breast size, making lips fuller, reshaping your nose, altering your overall facial appearance - even something called "anal smoothening." There are also options to make temporary treatments permanent.
 
 <<if $body.nose eq 3>>\
-@@.nurse;"For my favorite client, you get a 99% discount for anal smoothing treatments."@@
+@@.nurse;"Since you're my favorite client, I'll give you a 99% discount for anal smoothing treatments - want one?"@@
 
 <<endif>>\
 <!--<list of bodymods>-->\
@@ -160,7 +160,7 @@ Nancy asks if you want to make any changes to your body. There are options for i
 \
 <<if $flags.salonNose>>\
 
-	After recent facial treatments you need to wait a week to recover.
+	You need to wait a week for your face to recover before any further facial treatments.
 <<else>>\
 	<<if $body.face eq 1>>\
 		<<set _item=itemsC.surgeryFacial>>\
@@ -198,7 +198,7 @@ Nancy asks if you want to make any changes to your body. There are options for i
 		<<endif>>\
 \
 		<<if $body.nose gt 0>>\
-		Return original shape of nose 10$\
+		Reversal of rhinoplasty and restoration of original nose shape 10$\
 		<<print '[[ Order|Clinic Body enhancing][$scene="defaultNose"; $random.stored=0]]'>>
 		<<endif>>\
 \
@@ -217,28 +217,32 @@ Nancy asks if you want to make any changes to your body. There are options for i
 	<!--<breasts>-->\
 <<elseif $scene eq "breastImplantsA" or $scene eq "breastImplantsB" or $scene eq "breastImplantsC" or $scene eq "breastImplantsDD">>\
 	<<if $scene eq "breastImplantsA">>\
-		Nancy takes you to the back room of the salon.
+		Nancy leads you into into the back room of the salon.
 		
 		@@.nurse;"We'll need a bit of privacy for this treatment,"@@ she says, matter-of-factly.
 		
-		She has you remove your shirt.
+		She has you remove any and all clothing covering your chest.
 		
-		@@.nurse;"This may sting a bit, but it should pass quickly,"@@ she says as she retrieves a needle from a case marked "A".
+		@@.nurse;"This may sting a bit, but it should pass quickly,"@@ she says as she retrieves a small syringe from a case marked "A".
 		
-		@@.nurse;"We don't get much call for this treatment.  That's why I only keep a few of these in stock."@@
+		@@.nurse;"We don't get many requests for this treatment, so I only keep a few of these in stock."@@
 		
 		She quickly injects your chest, just below your nipples.  
 		
 		<<if $body.boobs eq 1>>\
 			After only a few minutes, your small breasts are stabilized.
 			
-			@@.nurse;"It looks so good on you. Are you sure you don't want to make this permanent? This will only last a week or so, so don't be a stranger and come back soon for your next treatment,"@@ Nancy gives you a wink and sends you on your way.
+			@@.nurse;"They're rather small, but they look so good on you. Are you sure you don't want to make them permanent? As I've explained before, these temporary doses only last a week or so, so if you want to keep your current cup-size you'll have to return for a repeat treatment."@@ 
+			
+			Nancy gives you a wink and sends you on your way.
 		
-			@@.reward;Your small breast treatment is renewed.@@
+			@@.reward;Your small breast treatment is renewed!@@
 		<<else>>\
-			After only a few minutes, your chest begins to swell up into a small woman's chest.
+			After only a few minutes, your chest begins to swell up, and soon enough it appears just like a woman's.
 		
-			@@.nurse;"Now, this will only last a week or so, so don't be a stranger and come back soon for your next treatment,"@@ Nancy gives you a wink and sends you on your way.
+			@@.nurse;"Barely beyond flat-chested, but definitely an improvement. Now, the dose I gave you will only last about a week, so don't be a stranger and come back soon if you want to renew the treatment."@@ 
+			
+			Nancy gives you a wink and sends you on your way.
 			
 			@@.reward;You now have small breasts!@@
 		<<endif>>\
@@ -247,30 +251,34 @@ Nancy asks if you want to make any changes to your body. There are options for i
 		<<set $body.boobs = 1>>\
 		<<set $flags.salonBreast=true>>\
 	<<elseif $scene eq "breastImplantsB">>\
-		Nancy takes you to the back room of the salon.
+		Nancy leads you into into the back room of the salon.
 		
 		@@.nurse;"We'll need a bit of privacy for this treatment,"@@ she says, matter-of-factly.
 		
-		She has you remove your shirt.
+		She has you remove any and all clothing covering your chest.
 		
-		@@.nurse;"This may sting a bit, but it should pass quickly,"@@ she says as she retrieves a needle from a case marked "B".
+		@@.nurse;"This may sting a bit, but it should pass quickly,"@@ she says as she retrieves an average sized syringe from a case marked "B".
 		
-		@@.nurse;"This treatment is a bit more popular than small sizes of course, but I think you'd like to try bigger sizes."@@
+		@@.nurse;"This treatment is a bit more popular than our smallest size available. Truth be told, I have a feeling you'd like to try even bigger sizes - maybe next time?"@@
 		
 		She quickly injects your chest, just below your nipples.  
 		
 		<<if $body.boobs eq 2>>\
 			After only a few minutes, your modest breasts are stabilized.
 			
-			@@.nurse;"It looks so good on you. Are you sure you don't want to make this permanent? This will only last a week or so, so don't be a stranger and come back soon for your next treatment,"@@ Nancy gives you a wink and sends you on your way.
+			@@.nurse;"As average as breast-size comes, but they look so good on you. Are you sure you don't want to make them permanent? As I've explained before, these temporary doses only last a week or so, so if you want to keep your current cup-size you'll have to return for a repeat treatment."@@ 
+			
+			Nancy gives you a wink and sends you on your way.
 		
-			@@.reward;Your modest sized artificial breast treatment is renewed.@@
+			@@.reward;Your modestly sized artificial breast treatment is renewed!@@
 		<<else>>\
 			After only a few minutes, your small breasts begin to swell up into a modest woman's breasts.
 		
-			@@.nurse;"Now, this will only last a week or so, so don't be a stranger and come back soon for your next treatment,"@@ Nancy gives you a wink and sends you on your way.
+			@@.nurse;"A nice, average pair of breasts. Now, the dose I gave you will only last about a week, so don't be a stranger and come back soon if you want to renew the treatment."@@ 
 			
-			@@.reward;You now have noticeable, ample breasts!@@
+			Nancy gives you a wink and sends you on your way.
+			
+			@@.reward;You now have noticeable, ample breasts! Good luck trying to hide them.@@
 		<<endif>>\
 		<<set _item=itemsC.breastImplantsB>>\
 		<<buyItem _item.id>>\
